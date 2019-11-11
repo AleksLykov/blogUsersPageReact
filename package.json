@@ -1,0 +1,47 @@
+{
+  "name": "bloguserspagereact",
+  "version": "1.0.0",
+  "description": "A small blog page with users, posts and comments using ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksLykov/blogUsersPageReact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksLykov/blogUsersPageReact/issues"
+  },
+  "homepage": "https://github.com/AleksLykov/blogUsersPageReact#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "@std/esm": "^0.26.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.2.0",
+    "esm": "^3.2.25",
+    "file-loader": "^4.2.0",
+    "fsevents": "^2.1.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router": "^3.2.5",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.8"
+  }
+}

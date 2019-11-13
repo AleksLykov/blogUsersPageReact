@@ -1,27 +1,31 @@
 import React, { Component } from 'react'
 import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 
 
 export default class Layout extends Component {
-    render() {
-        const menuItems = [
+    constructor(props) {
+        super(props)
+        this.logo = '../img/logo.png'
+        this.menuItems = [
             { href: '/', title: 'Main'},
             { href: '/users', title: 'Users'},
-            { href: '/tech', title: 'Technical'},
+            { href: '/posts', title: 'Posts'},
+            { href: '/comments', title: 'Comments'},
             { href: '/about', title: 'About us'},
             { href: '/contacts', title: 'Contacts'}
         ]
-        const logoMainPath = '../img/logo.png'
+    }
+    render() {
         return (
-            <div className='container'>
-                <div className="row">
-                    <Menu items = { menuItems } logoLink = {logoMainPath}/>
-                    <div className="col-1"></div>
-                    <div className="col-10">
+            <div>
+                <Menu items = { this.menuItems } logo = { this.logo }/>
+                <div className='col-12 main-content'>
+                    <div className='container'>
                         {this.props.children}
                     </div>
-                    <div className="col-1"></div>
                 </div>
+                <Footer /> 
             </div>
         )
     }

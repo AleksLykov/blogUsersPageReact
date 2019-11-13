@@ -4,7 +4,13 @@ import { Link } from 'react-router'
 
 export default class MenuItem extends React.Component {
     render() {
-        return <li className='menu-list_item'><Link to={this.props.href} className='menu-list_link'>{this.props.children}</Link></li>
+        return (
+            <li className='menu-list_item'>
+                <Link to={this.props.href} className={ this.props.active? 'menu-list_link active':'menu-list_link'}>
+                    {this.props.children}
+                </Link>
+            </li>
+        )
     }
 }
 

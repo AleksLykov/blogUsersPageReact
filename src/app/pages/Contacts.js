@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 export default class Contacts extends Component {
     render() {
-        console.log(this.props)
         return (
             <div>
                 <h1>Contacts</h1>

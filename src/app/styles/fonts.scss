@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'officinaserifcbold';
+  src: url('../assets/fonts/officinaserifc-bold-webfont.eot');
+  src: url('../assets/fonts/officinaserifc-bold-webfont.eot#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/officinaserifc-bold-webfont.woff') format('woff'),
+    url('../assets/fonts/officinaserifc-bold-webfont.ttf') format('truetype'),
+    url('../assets/fonts/officinaserifc-bold-webfont.svg#officinaserifcbold')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'officinaserifcregular';
+  src: url('../assets/fonts/officinaserifc-book-webfont.eot');
+  src: url('../assets/fonts/officinaserifc-book-webfont.eot#iefix')
+      format('embedded-opentype'),
+    url('../assets/fonts/officinaserifc-book-webfont.woff') format('woff'),
+    url('../assets/fonts/officinaserifc-book-webfont.ttf') format('truetype'),
+    url('../assets/fonts/officinaserifc-book-webfont.svg#officinaserifcregular')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

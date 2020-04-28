@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './app/styles/style.css'
+import './app/styles/style.scss'
 import png from './app/img/logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import "semantic-ui-less/semantic.less";
 
 import Layout from './app/layouts/Layout'
 import Main from './app/pages/Main'

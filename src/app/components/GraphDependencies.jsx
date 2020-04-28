@@ -8,7 +8,7 @@ import React from 'react';
 //   },
 //   visReferenceWrapper: {
 //     width: '600px',
-//     height: '400px',
+
 
 //   }
 // });

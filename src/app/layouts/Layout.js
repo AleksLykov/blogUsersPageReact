@@ -9,9 +9,9 @@ export default class Layout extends Component {
         this.logo = '../img/logo.png'
         this.menuItems = [
             { href: '/', title: 'Main'},
-            { href: '/users', title: 'Users'},
-            { href: '/posts', title: 'Posts'},
-            { href: '/comments', title: 'Comments'},
+            { href: '/users', title: 'Юзвери'},
+            { href: '/posts', title: 'Посты'},
+            { href: '/comments', title: 'Комменты'},
             { href: '/about', title: 'About us'},
             { href: '/contacts', title: 'Contacts'}
         ]

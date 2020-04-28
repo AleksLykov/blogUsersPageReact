@@ -1,5 +1,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require ('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: "./src/index.js",
@@ -9,6 +10,11 @@ module.exports = {
         publicPath: '/',
     },
     mode: "development",
+    resolve: {
+        alias: {
+            '../../theme.config$': path.join(__dirname, 'src/app/styles/semantic-ui/theme.config')  
+        }
+    },
     module: {
         rules: [
             {
@@ -20,13 +26,27 @@ module.exports = {
             test: /\.css$/,
             use: ["style-loader", "css-loader"]
             },
-            {   //static files
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'img',
-                    name: '[name].[ext]'
+            {   //sass
+            test: /\.(sass|scss)$/,
+            use: ["style-loader", "css-loader", "sass-loader"]
+            },
+            {   // less
+            use: [
+                {
+                loader: MiniCssExtractPlugin.loader
                 },
+                'css-loader',
+                'less-loader'
+            ],
+            test: /\.less$/
+            },
+            {   //static files
+            test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+            loader: 'file-loader',
+            options: {
+                outputPath: 'img',
+                name: '[name].[ext]'
+            },
             },
             { 
             test: /\.html$/,
@@ -39,7 +59,8 @@ module.exports = {
             template: "./src/app/html/index.html",
             filename: "index.html",
             excludeChunks: ['server']
-        })
+        }),
+        new MiniCssExtractPlugin()
     ],
     devServer: {
         historyApiFallback: true,
